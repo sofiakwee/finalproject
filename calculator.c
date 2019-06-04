@@ -35,7 +35,7 @@
      char symbol;
      found = sscanf(argv[2], "%c", &symbol);
 
-   if (&symbol == "x")
+   if ("%c" == "x", symbol)
     {
      float result = multiply(value1, value2);
      printf("Product of %f and %f = %f\n", value1, value2, result);
