@@ -35,13 +35,10 @@
      char symbol;
      found = sscanf(argv[2], "%c", &symbol);
 
-<<<<<<< HEAD
-     char str1[5] = {'x', '/', '+', '-', '\0'};
+  char str1[5] = {'x', '/', '+', '-', '\0'};
 
-printf("%s\n", str1);
+  printf("%s\n", str1);
 
-=======
->>>>>>> 849b7fc6e24dbf89b908f70c0849cbea428559eb
    if ("%c" == "x", symbol)
     {
      float result = multiply(value1, value2);
@@ -51,5 +48,15 @@ printf("%s\n", str1);
     {
      float result = subtract(value1, value2);
      printf("Difference of %f and %f = %f\n", value1, value2, result);
+    }
+   if ("%c" == "/", symbol)
+    {
+     float result = divide(value1, value2);
+     printf("Quotient of %f and %f = %f\n", value1, value2, result);
+    }
+   if ("%c" == "+", symbol)
+    {
+     float result = add(value1, value2);
+     printf("Sum of %f and %f = %f\n", value1, value2, result);
     }
 }
