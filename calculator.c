@@ -30,11 +30,13 @@
     if (s[i] == symbol && symbol == 'x')
     {
      float result = multiply(value1, value2);
+     printf("%f %c %f = ?\n", value1, symbol, value2);
      printf("Product of %f and %f = %f\n", value1, value2, result);
     };
     if (s[i] == symbol && symbol == '/')
     {
      float result = divide(value1, value2);
+     printf("%f %c %f = ?\n", value1, symbol, value2);
      printf("Quotient of %f and %f = %f\n", value1, value2, result);
     };
 }
@@ -57,11 +59,13 @@
     if (a[i] == symbol && symbol == '+')
     {
      float result = add(value1, value2);
+     printf("%f %c %f = ?\n", value1, symbol, value2);
      printf("Sum of %f and %f = %f\n", value1, value2, result);
     };
     if (a[i] == symbol && symbol == '-')
     {
      float result = subtract(value1, value2);
+     printf("%f %c %f = ?\n", value1, symbol, value2);
      printf("Difference of %f and %f = %f\n", value1, value2, result);
     };
 }
