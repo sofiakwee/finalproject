@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
    float multiply(float value1, float value2)
    {
@@ -35,28 +37,31 @@
      char symbol;
      found = sscanf(argv[2], "%c", &symbol);
 
-  char str1[5] = {'x', '/', '+', '-', '\0'};
-
-  printf("%s\n", str1);
-
-   if ("%c" == "x", symbol)
+    char *s = "x/+-";
+    char* ps = s;
+   while(*ps != '\0')
+    {
+        printf("%c\n", *ps);
+   if ("%c" == "%c", *ps, symbol)
     {
      float result = multiply(value1, value2);
      printf("Product of %f and %f = %f\n", value1, value2, result);
-    }
-   if ("%c" == "-", symbol)
+    };
+   if ("%c" == "%c", *ps, symbol)
     {
      float result = subtract(value1, value2);
      printf("Difference of %f and %f = %f\n", value1, value2, result);
-    }
-   if ("%c" == "/", symbol)
+    };
+   if ("%c" == "%c", *ps, symbol)
     {
      float result = divide(value1, value2);
      printf("Quotient of %f and %f = %f\n", value1, value2, result);
-    }
-   if ("%c" == "+", symbol)
+    };
+   if("%c" == "%c", *ps, symbol)
     {
      float result = add(value1, value2);
      printf("Sum of %f and %f = %f\n", value1, value2, result);
+    };
+        ps++;
     }
 }
