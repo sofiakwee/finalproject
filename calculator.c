@@ -37,31 +37,28 @@
      char symbol;
      found = sscanf(argv[2], "%c", &symbol);
 
-    char *s = "x/+-";
-    char* ps = s;
-   while(*ps != '\0')
-    {
-        printf("%c\n", *ps);
-   if ("%c" == "%c", *ps, symbol)
+    char* s = "x/+-";
+    for (int i = 0; i < strlen(s); i++)
+{
+    if (s[i] == symbol && symbol == 'x')
     {
      float result = multiply(value1, value2);
      printf("Product of %f and %f = %f\n", value1, value2, result);
     };
-   if ("%c" == "%c", *ps, symbol)
-    {
-     float result = subtract(value1, value2);
-     printf("Difference of %f and %f = %f\n", value1, value2, result);
-    };
-   if ("%c" == "%c", *ps, symbol)
+    if (s[i] == symbol && symbol == '/')
     {
      float result = divide(value1, value2);
      printf("Quotient of %f and %f = %f\n", value1, value2, result);
     };
-   if("%c" == "%c", *ps, symbol)
+    if (s[i] == symbol && symbol == '+')
     {
      float result = add(value1, value2);
      printf("Sum of %f and %f = %f\n", value1, value2, result);
     };
-        ps++;
-    }
+    if (s[i] == symbol && symbol == '-')
+    {
+     float result = subtract(value1, value2);
+     printf("Difference of %f and %f = %f\n", value1, value2, result);
+    };
+}
 }
