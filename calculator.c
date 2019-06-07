@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+
+   int main(int argc, char* argv[])
+   {
+     float value1;
+     int found = sscanf(argv[1], "%f", &value1);
+
+     float value2;
+     found = sscanf(argv[3], "%f", &value2);
+
+     char symbol;
+     found = sscanf(argv[2], "%c", &symbol);
 
    float multiply(float value1, float value2)
    {
@@ -13,29 +23,6 @@
      float quotient = (value1 / value2);
      return quotient;
    }
-
-   float add(float value1, float value2)
-   {
-     float sum = (value1 + value2);
-     return sum;
-   }
-
-   float subtract(float value1, float value2)
-   {
-     float difference = (value1 - value2);
-     return difference;
-   }
-
-   int main(int argc, char* argv[])
-   {
-     float value1;
-     int found = sscanf(argv[1], "%f", &value1);
-
-     float value2;
-     found = sscanf(argv[3], "%f", &value2);
-
-     char symbol;
-     found = sscanf(argv[2], "%c", &symbol);
 
     char* s = "x/";
     for (int i = 0; i < strlen(s); i++)
@@ -51,6 +38,19 @@
      printf("Quotient of %f and %f = %f\n", value1, value2, result);
     };
 }
+
+   float add(float value1, float value2)
+   {
+     float sum = (value1 + value2);
+     return sum;
+   }
+
+   float subtract(float value1, float value2)
+   {
+     float difference = (value1 - value2);
+     return difference;
+   }
+
     char* a = "+-";
     for (int i = 0; i < strlen(a); i++)
 {
