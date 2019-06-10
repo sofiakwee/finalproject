@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include "calculator.h"
 
-   int main(int argc, char* argv[])
+  int main(int argc, char* argv[])
    {
      float value1;
      int found = sscanf(argv[1], "%f", &value1);
@@ -24,7 +25,6 @@
      return quotient;
    }
 
-    char* s = "x/";
     for (int i = 0; i < strlen(s); i++)
 {
     if (s[i] == symbol && symbol == 'x')
@@ -53,7 +53,6 @@
      return difference;
    }
 
-    char* a = "+-";
     for (int i = 0; i < strlen(a); i++)
 {
     if (a[i] == symbol && symbol == '+')
